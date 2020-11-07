@@ -7,8 +7,6 @@ namespace Tracer
 {
     public class MainApp
     {
-        
-        private const string JsonPath = "E:\\Sharaga\\SPP\\Tracer\\Files\\json.json", XmlPath = "E:\\Sharaga\\SPP\\Tracer\\Files\\test.xml";
         private static void Main(string[] args)
         {
             var program = new MainApp();
@@ -21,14 +19,14 @@ namespace Tracer
             thread.Join();
             
             var result = new VXmlSerializer().Serialize(tracer.GetTraceResult());
-            IPrinter filePrinter = new FilePrinter(XmlPath);
+            IPrinter filePrinter = new FilePrinter(PathHolder.XmlPath);
             IPrinter consolePrinter = new ConsolePrinter();
             
             filePrinter.PrintResult(result);
             consolePrinter.PrintResult(result);
             
             result = new JsonSerializer().Serialize(tracer.GetTraceResult());
-            filePrinter = new FilePrinter(JsonPath);
+            filePrinter = new FilePrinter(PathHolder.JsonPath);
             
             filePrinter.PrintResult(result);
             consolePrinter.PrintResult(result);

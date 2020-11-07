@@ -39,6 +39,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="MainApp.cs" />
+        <Compile Include="PathHolder.cs" />
         <Compile Include="Print\ConsolePrinter.cs" />
         <Compile Include="Print\FilePrinter.cs" />
         <Compile Include="Print\IPrinter.cs" />
