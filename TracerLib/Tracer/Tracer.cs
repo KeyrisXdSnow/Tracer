@@ -20,7 +20,7 @@ namespace TracerLib.Tracer
             
             var stackTrace = new StackTrace();
 
-            var path = stackTrace.ToString().Split(Convert.ToChar("\r\n"));
+            var path = stackTrace.ToString().Split(new string[]{ "\r\n"}, StringSplitOptions.None);
             path[0] = "";
 
             var methodName = stackTrace.GetFrames()[1].GetMethod().Name;
@@ -33,7 +33,7 @@ namespace TracerLib.Tracer
         {
             var threadTrace = _traceResult.GetThreadTrace(Thread.CurrentThread.ManagedThreadId);
             
-            var path = new StackTrace().ToString().Split(Convert.ToChar("\r\n"));
+            var path = new StackTrace().ToString().Split(new string[]{ "\r\n"}, StringSplitOptions.None);
             path[0] = "";
             
             threadTrace.PopMethod(string.Join("",path));

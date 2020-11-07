@@ -44,6 +44,15 @@
         <Compile Include="Print\IPrinter.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Files" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\TracerLib\TracerLib.csproj">
+        <Project>{a18e8291-5971-46ee-b5e6-c5dd09fefee8}</Project>
+        <Name>TracerLib</Name>
+      </ProjectReference>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
