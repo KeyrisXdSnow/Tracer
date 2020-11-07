@@ -1,6 +1,6 @@
 ﻿namespace Tracer
 {
-    internal class Program
+    internal class MainApp
     {
         public static void Main(string[] args)
         {
